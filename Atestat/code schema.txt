@@ -1,0 +1,12 @@
+while (clock1) -> show pictures
+if i>picure.index
+clock1.Enabled=false;
+clock2.Enabled=true;
+if(clock2) -> while(clock2){
+	show random pictures
+	if(pictures == picture_order //(picture.index)
+	score++;
+}
+==>> picturebox array
+==>> increasing index
+==>> comparing index to array index  ==>>2 indexes 1/2 arrays 
