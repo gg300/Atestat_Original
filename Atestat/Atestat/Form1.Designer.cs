@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.b_start = new System.Windows.Forms.Button();
             this.b_exit = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // b_start
@@ -59,7 +61,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Atestat.Properties.Resources.Dinosaur_Memory_Game;
             this.ClientSize = new System.Drawing.Size(982, 713);
@@ -77,6 +79,7 @@
 
         private System.Windows.Forms.Button b_start;
         private System.Windows.Forms.Button b_exit;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

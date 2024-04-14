@@ -31,3 +31,14 @@ D:\1____atestattt\C-\Atestat\Atestat\obj\Debug\Atestat.csproj.GenerateResource.c
 D:\1____atestattt\C-\Atestat\Atestat\obj\Debug\Atestat.csproj.CoreCompileInputs.cache
 D:\1____atestattt\C-\Atestat\Atestat\obj\Debug\Atestat.exe
 D:\1____atestattt\C-\Atestat\Atestat\obj\Debug\Atestat.pdb
+D:\gitrepo\Atestat\Atestat\Atestat\bin\Debug\Atestat.exe.config
+D:\gitrepo\Atestat\Atestat\Atestat\bin\Debug\Atestat.exe
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.csproj.AssemblyReference.cache
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.Form1.resources
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.joc.resources
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.Properties.Resources.resources
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.csproj.GenerateResource.cache
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.csproj.CoreCompileInputs.cache
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.exe
+D:\gitrepo\Atestat\Atestat\Atestat\obj\Debug\Atestat.pdb
+D:\gitrepo\Atestat\Atestat\Atestat\bin\Debug\Atestat.pdb

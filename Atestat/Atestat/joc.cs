@@ -27,7 +27,7 @@ namespace Atestat
         /// display initial
         private void joc_Load(object sender, EventArgs e)
         {
-            LoadImages(@"E:\github\C-\C-\Atestat\assets");
+            LoadImages(@"D:\gitrepo\Atestat\Atestat\assets");
             pictureBox = new PictureBox
             {
                 Name = "pictureBox",
@@ -54,6 +54,69 @@ namespace Atestat
             pictureBox.Image = image;
         }
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///
+        public class RefString
+        {
+            public string Value { get; set; }
+        }
+        public void ShowPicturesInForm(string folderPath, RefString file2)
+        {
+            // Create a new form
+            Form form = new Form();
+
+            // Get all files in the specified folder
+            string[] files = Directory.GetFiles(folderPath);
+
+            // Shuffle the array of files
+            Random rng = new Random();
+            files = files.OrderBy(file => rng.Next()).ToArray(); // Changed variable name here
+
+            // Initialize the location for the next PictureBox
+            int x = 10;
+            int y = 10;
+
+            // Loop through each file
+            foreach (string file in files)
+            {
+                // Get the file extension
+                string extension = Path.GetExtension(file).ToLower();
+
+                // Check if the file is a picture
+                if (extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".gif" || extension == ".bmp")
+                {
+                    // Create a new PictureBox
+                    PictureBox pictureBox = new PictureBox
+                    {
+                        ImageLocation = file,
+                        SizeMode = PictureBoxSizeMode.Zoom,
+                        Size = new System.Drawing.Size(100, 100),
+                        Location = new System.Drawing.Point(x, y)
+                    };
+
+                    // Add a click event handler
+                    pictureBox.Click += (sender, e) =>
+                    {
+                        file2.Value = file;
+                    };
+
+                    // Add the PictureBox to the form
+                    form.Controls.Add(pictureBox);
+
+                    // Update the location for the next PictureBox
+                    x += 110;
+                    if (x + 110 > form.Width)
+                    {
+                        x = 10;
+                        y += 110;
+                    }
+                }
+            }
+
+            // Show the form
+            form.ShowDialog();
+        }
+
+        bool ok = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (imageIndex < images.Count)
@@ -63,7 +126,11 @@ namespace Atestat
             }
             else
             {
-                pictureBox.Dispose(); 
+                RefString file2 = new RefString();
+                pictureBox.Dispose();
+                timer1.Enabled = false;
+                ShowPicturesInForm(@"D:\gitrepo\Atestat\Atestat\assets", file2);
+                Console.WriteLine(file2.Value);
             }
         }
     }
